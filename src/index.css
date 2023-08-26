@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --theme: 29, 100%, 59%;
+    --primary: 29, 100%, 59%;
+    --secondary: 103, 65%, 45%;
+    --foreground: 0, 0%, 20%;
+    --muted: 210 40% 96.1%;
+    --black: 0, 0%, 0%;
+    --white: 100, 100%, 100%;
+  }
+
+  body {
+    @apply min-h-screen font-poppins text-base text-foreground;
+  }
+
+  #root {
+    @apply flex min-h-screen overflow-hidden;
+  }
+  
+  .theme-orange {
+    --theme: var(--primary);
+  }
+
+  .theme-green {
+    --theme: var(--secondary);
+  }
+}
