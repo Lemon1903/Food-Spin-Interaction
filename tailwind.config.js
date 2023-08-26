@@ -5,9 +5,8 @@ export default {
     container: {
       center: true,
       padding: {
-        DEFAULT: "1rem",
-        md: "2rem",
-        lg: "4rem",
+        DEFAULT: "2rem",
+        md: "4rem",
         xl: "6.25rem",
       },
       screens: {
@@ -20,10 +19,12 @@ export default {
       poppins: "Poppins, sans-serif",
     },
     fontSize: {
-      /* fontSize: 44px, lineHeight: 66px */
+      /* fontSize: 40px 44px, lineHeight: 66px */
       price: ["2.75rem", { lineHeight: "4.125rem", fontWeight: 600 }],
-      /* fontSize: 36px, lineHeight: 50px */
+      "price-small": ["2.5rem", { lineHeight: "4.125rem", fontWeight: 600 }],
+      /* fontSize: 30px 36px, lineHeight: 40px 50px */
       h1: ["2.25rem", { lineHeight: "3.125rem", fontWeight: 500 }],
+      "h1-small": ["1.875rem", { lineHeight: "2.5rem", fontWeight: 500 }],
       /* fontSize: 14px, lineHeight: 21px */
       link: ["0.875rem", { lineheight: "1.313rem", fontWeight: 500 }],
       /* fontSize: 13px, lineHeight: 19.5px */

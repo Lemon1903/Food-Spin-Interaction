@@ -7,17 +7,17 @@ export default function FoodInformation() {
   const food = foods.all[foods.currentIdx];
 
   return (
-    <div className="relative max-w-sm pr-8">
+    <div className="relative max-w-sm max-lg:text-center lg:pr-8">
       {food && (
         <AnimatePresence mode="popLayout">
           <motion.p
             key={`price${food.id}`}
-            className={`${foods.theme} text-theme text-price transition-colors`}
+            className={`${foods.theme} text-price-small text-theme transition-colors md:text-price`}
             {...scaleAnimation(["top left"], 0.3)}
           >
             ${food.price}
           </motion.p>
-          <motion.h1 key={`name${food.id}`} className="text-h1" {...scaleAnimation(["top left"], 0.3)}>
+          <motion.h1 key={`name${food.id}`} className="text-h1-small md:text-h1" {...scaleAnimation(["top left"], 0.3)}>
             {food.name}
           </motion.h1>
           <motion.p key={`desc${food.id}`} className="mb-7 mt-3" {...scaleAnimation(["top left"], 0.3)}>
@@ -28,7 +28,7 @@ export default function FoodInformation() {
             <AnimatePresence>
               <motion.div
                 key={`button${food.id}`}
-                className={`${foods.theme} bg-theme shadow-theme/25 absolute inset-0 -z-10 scale-x-90 rounded-full shadow-xl`}
+                className={`${foods.theme} absolute inset-0 -z-10 scale-x-90 rounded-full bg-theme shadow-xl shadow-theme/25`}
                 {...scaleAnimation([foods.direction, foods.direction === "left" ? "right" : "left"], 0)}
               />
             </AnimatePresence>
