@@ -25,10 +25,12 @@ export default {
       /* fontSize: 30px 36px, lineHeight: 40px 50px */
       h1: ["2.25rem", { lineHeight: "3.125rem", fontWeight: 500 }],
       "h1-small": ["1.875rem", { lineHeight: "2.5rem", fontWeight: 500 }],
-      /* fontSize: 14px, lineHeight: 21px */
+      /* fontSize: 14px , lineHeight: 21px */
       link: ["0.875rem", { lineheight: "1.313rem", fontWeight: 500 }],
+      /* fontSize: 16px, lineHeight: 1 */
+      base: ["1rem", { lineheight: 1 }],
       /* fontSize: 13px, lineHeight: 19.5px */
-      base: ["0.813rem", { lineheight: "1.25rem" }],
+      small: ["0.813rem", { lineheight: "1.25rem" }],
     },
     colors: {
       transparent: "transparent",

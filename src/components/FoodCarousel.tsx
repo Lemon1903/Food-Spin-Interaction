@@ -6,11 +6,10 @@ export default function FoodCarousel() {
 
   function calculateClipPath() {
     const bgWidth = "calc(100% / 0.4757)";
-    const center = `calc((${bgWidth} / 2) - 50%)`;
-    const offset = `calc(${bgWidth} * 0.015)`;
+    const offset = `calc(${bgWidth} * 0.01)`;
 
     return {
-      clipPath: `circle(calc(${bgWidth} / 2) at 50% calc((${center} - ${offset}) * -1)`,
+      clipPath: `circle(calc(${bgWidth} / 2) at 50% calc((50% + ${offset}) * -1)`,
     };
   }
 
@@ -25,13 +24,13 @@ export default function FoodCarousel() {
         {foods.all.map((food, idx) => (
           <div
             key={idx}
-            className="absolute left-1/2 top-0 h-1/2 origin-bottom -translate-x-1/2 rotate-[--img-angle] focus:bg-primary"
+            className="absolute left-1/2 top-0 h-1/2 origin-bottom -translate-x-1/2 rotate-[--img-angle]"
             style={{ "--img-angle": `${idx * angle}deg` } as React.CSSProperties}
           >
             <img
               src={food.image}
               alt={food.name}
-              className="mx-auto w-[34%] -translate-y-1/2 cursor-pointer select-none rounded-full shadow-2xl transition-all hover:scale-110"
+              className="mx-auto aspect-square w-1/3 -translate-y-1/2 cursor-pointer select-none rounded-full shadow-2xl transition-all hover:scale-110"
               onClick={() => foods.moveToIdx(idx)}
             />
           </div>

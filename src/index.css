@@ -16,13 +16,13 @@
   }
 
   body {
-    @apply min-h-screen font-poppins text-base text-foreground;
+    @apply text-small min-h-screen font-poppins text-foreground;
   }
 
   #root {
     @apply flex min-h-screen overflow-hidden;
   }
-  
+
   .theme-orange {
     --theme: var(--primary);
   }

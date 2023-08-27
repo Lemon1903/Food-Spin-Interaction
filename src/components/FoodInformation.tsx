@@ -28,7 +28,7 @@ export default function FoodInformation() {
             <AnimatePresence>
               <motion.div
                 key={`button${food.id}`}
-                className={`${foods.theme} absolute inset-0 -z-10 scale-x-90 rounded-full bg-theme shadow-xl shadow-theme/25`}
+                className={`${foods.theme} absolute inset-0 -z-10 rounded-full bg-theme shadow-xl shadow-theme/25`}
                 {...scaleAnimation([foods.direction, foods.direction === "left" ? "right" : "left"], 0)}
               />
             </AnimatePresence>
