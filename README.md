@@ -1,27 +1,13 @@
-# React + TypeScript + Vite
+# Food Interaction Carousel
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This captivating landing page serves as a gateway to a food e-commerce website, presenting a captivating spin carousel that showcases a list of delectable offerings. This dynamic presentation is complemented by additional information elegantly displayed alongside the carousel, creating an immersive and engaging user experience. Furthermore, the page is adorned with a stynning animation and responsiveness that add an extra layer of enhancement to the overall user experience.
 
-Currently, two official plugins are available:
+### Screenshot
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Page Preview](public/screenshot.png)
 
-## Expanding the ESLint configuration
+### Figma Design by
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- **Designer** - Ismail El Azizi
+- **Figma Profile** - https://www.figma.com/@ismail
+- **Design Link** - https://www.figma.com/community/file/825851668856380188
