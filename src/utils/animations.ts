@@ -1,5 +1,5 @@
 import { HTMLMotionProps, MotionProps } from "framer-motion";
-import { TDirection } from "./FoodsContext";
+import { TDirection } from "../components/FoodsContext";
 
 export function centerImgAnimation(direction: TDirection): HTMLMotionProps<"img"> {
   const sign = direction === "left" ? -1 : 1;

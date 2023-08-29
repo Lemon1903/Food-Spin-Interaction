@@ -1,14 +1,7 @@
-import { PropsWithChildren, createContext, useContext, useEffect, useState } from "react";
+import { PropsWithChildren, createContext, useContext, useState } from "react";
+import { IFood, foods } from "../utils/data";
 
 export type TDirection = "left" | "right";
-
-interface IFood {
-  id: number;
-  name: string;
-  image: string;
-  description: string;
-  price: number;
-}
 
 interface IFoodsContext {
   all: IFood[];
@@ -24,21 +17,10 @@ interface IFoodsContext {
 const FoodsContext = createContext<IFoodsContext | null>(null);
 
 export default function FoodsProvider({ children }: PropsWithChildren) {
-  const [foods, setFoods] = useState<IFood[]>([]);
   const [currentIdx, setCurrentIdx] = useState(0);
   const [absoluteIdx, setAbsoluteIdx] = useState(0);
   const [direction, setDirection] = useState<TDirection>("right");
   const theme = absoluteIdx % 2 === 0 ? "theme-orange" : "theme-green";
-
-  useEffect(() => {
-    // This one isn't a perfect fetching but can do it for a simple one
-    async function fetchFoods() {
-      const data = await fetch("src/data.json");
-      const { foods }: { foods: IFood[] } = await data.json();
-      setFoods(foods);
-    }
-    fetchFoods();
-  }, []);
 
   function previous() {
     const newIdx = currentIdx === 0 ? foods.length - 1 : currentIdx - 1;

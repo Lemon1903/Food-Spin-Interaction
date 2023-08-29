@@ -30,7 +30,9 @@ export default function Header() {
         <ul className="grid text-base max-md:divide-y max-md:divide-foreground/40 max-md:text-center md:flex md:gap-14 md:text-link">
           {["Breakfast", "Lunch", "Dinner"].map((link) => (
             <li className="grid max-md:py-5" key={link}>
-              <a href="/">{link}</a>
+              <a className="transition-colors hover:text-primary" href="/">
+                {link}
+              </a>
             </li>
           ))}
         </ul>
@@ -39,7 +41,7 @@ export default function Header() {
         <button className="md:hidden" onClick={toggleNavbar}>
           {isOpen ? <Close /> : <Menu />}
         </button>
-        <button className="relative">
+        <button className="relative transition-transform hover:scale-110">
           <Cart />
           <div className="absolute -bottom-0.5 -right-0.5 h-2 w-2 rounded-full bg-primary content-['']" />
         </button>
